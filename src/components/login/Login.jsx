@@ -301,6 +301,9 @@ export function Login() {
     const handleSubmit = async(e) => {
         
         e.preventDefault();
+        //Not able to upload API in HEroku/AWS so for now directly showing Map 
+        window.alert("Not able to upload API in HEroku/AWS so for now directly showing Map,api working fine in localhost.")
+        history("/dashboard");
         const response = await fetch("http://localhost:5000/login", {
             method: 'POST',
             headers: {
